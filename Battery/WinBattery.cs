@@ -62,7 +62,7 @@ namespace Battery
                         break;
                 }
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                if (powerPercent < 20)
+                if (powerPercent <= 20)
                 {
                     progressBar1.BackColor = Color.Red;
                     progressBar1.ForeColor = Color.FromArgb(192, 0, 0);
@@ -119,7 +119,7 @@ namespace Battery
         {
             try
             {
-              if (powerPercent <= 15 && power.PowerLineStatus==PowerLineStatus.Offline)
+              if (powerPercent <= 20 && power.PowerLineStatus==PowerLineStatus.Offline)
                 {
                     ShowForm();
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer(Resources.low);
@@ -192,9 +192,6 @@ namespace Battery
         {
             CheckPowerPercentFull();
         }
-
-
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             CheckPowerPercentLow();
