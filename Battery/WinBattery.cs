@@ -7,11 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using System.Windows.Forms;
-
-//Déveloper par ZAKARAIA NAJIM 
-//Date de création le 10/06/2019
-//Email :Zakaria.najim.1996@gmail.com
+using System.Windows.Forms
 
 namespace Battery
 {
